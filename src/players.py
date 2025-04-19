@@ -20,15 +20,17 @@ class Player(ABC):
 class HumanPlayer(Player):
     """Human player implementation."""
 
-    def display_move_options(self) -> None:
+    @staticmethod
+    def display_move_options() -> None:
         """
         Display the available move options to the user.
         """
         print("\nChoose your move:")
         for i, move in enumerate(Move, 1):
-            print(f"{i}. {move.value}")
+            print(f"{i}. {move.value.capitalize()}")
 
-    def get_valid_input(self) -> int:
+    @staticmethod
+    def get_valid_input() -> int:
         """
         Get and validate user input.
 

@@ -12,7 +12,8 @@ class Game:
         self.player_score = 0
         self.computer_score = 0
 
-    def determine_winner(self, player_move: Move, computer_move: Move) -> Winner:
+    @staticmethod
+    def determine_winner(player_move: Move, computer_move: Move) -> Winner:
         """
         Determine the winner of a round.
         
@@ -37,7 +38,8 @@ class Game:
         else:
             return Winner.COMPUTER
 
-    def display_round_result(self, player_move: Move, computer_move: Move, winner: Winner) -> None:
+    @staticmethod
+    def display_round_result(player_move: Move, computer_move: Move, winner: Winner) -> None:
         """
         Display the result of a round.
         
